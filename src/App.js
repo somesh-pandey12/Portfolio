@@ -102,31 +102,42 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="max-w-4xl mx-auto py-20 px-4 text-center border-t border-gray-900">
-        <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
-        <p className="text-gray-400 max-w-lg mx-auto mb-8">
-          I am actively looking for internship opportunities and software engineering roles. 
-          If you have a question or just want to say hi, feel free to drop a mail!
-        </p>
-        <a 
-          href="mailto:someshpandeycil@gmail.com" 
-          className="bg-white text-gray-950 hover:bg-gray-200 px-8 py-3.5 rounded-xl font-bold transition shadow-lg inline-block"
-        >
-          Say Hello 👋
-        </a>
-      </section>
+        <section id="contact" className="max-w-4xl mx-auto py-20 px-4 text-center border-t border-gray-900">
+  <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
+  <p className="text-gray-400 max-w-lg mx-auto mb-8">
+    I am actively looking for internship opportunities and software engineering roles. 
+    Feel free to reach out for collaboration or just to say hi!
+  </p>
+  {}
+  <a 
+    href="mailto:someshpandeycil@gmail.com" 
+    className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition shadow-lg inline-block transform hover:scale-105"
+  >
+    Say Hello 👋
+  </a>
+</section>
 
       {/* Footer */}
-      <footer className="py-10 text-center text-gray-600 border-t border-gray-900 max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-4">
-        <p className="text-sm">© 2026 Somesh Pandey. All rights reserved.</p>
-        <div className="space-x-6 text-sm font-medium">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-blue-400 transition">LinkedIn</a>
-          <a href="https://github.com/somesh-pandey12" target="_blank" rel="noreferrer" className="hover:text-white transition">GitHub</a>
-        </div>
-      </footer>
-      
-    </div>
-  );
-}
+      <footer className="py-10 text-center border-t border-gray-900 max-w-5xl mx-auto">
+  <p className="text-gray-500 mb-6">© 2026 Somesh. All rights reserved.</p>
+  <div className="flex justify-center space-x-10">
+    <a 
+      href="https://linkedin.com/in/your-profile" 
+      target="_blank" 
+      rel="noreferrer" 
+      className="text-gray-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-150"
+    >
+      <span className="text-3xl font-bold">LinkedIn</span>
+    </a>
+    <a 
+      href="https://github.com/somesh-pandey12" 
+      target="_blank" 
+      rel="noreferrer" 
+      className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-150"
+    >
+      <span className="text-3xl font-bold">GitHub</span>
+    </a>
+  </div>
+</footer>
 
 export default App;
