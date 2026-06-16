@@ -5,7 +5,7 @@ function App() {
     {
       title: "Foodverse",
       desc: "A complete MERN stack food delivery application. Features include secure user authentication (Passport.js), cart management, and seamless database integration with MongoDB.",
-      github: "https://github.com/somesh-pandey12/foodverse",
+      github: "https://github.com/somesh-pandey12/FoodVerse-MERN-App",
       demo: "#" // Jab live link ho, tab "#" hata kar link daal dena
     }
   ];
