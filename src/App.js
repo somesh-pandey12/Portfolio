@@ -114,6 +114,16 @@ function App() {
     className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition shadow-lg inline-block transform hover:scale-105"
   >
     Say Hello 👋
+
+    {}
+<a 
+  href="https://wa.me/917309805693" 
+  target="_blank" 
+  rel="noreferrer"
+  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-bold transition shadow-lg inline-block"
+>
+  WhatsApp Me 💬
+</a>
   </a>
 </section>
 
