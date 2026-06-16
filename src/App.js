@@ -4,9 +4,9 @@ function App() {
   const projects = [
     {
       title: "Foodverse",
-      desc: "A complete MERN stack food delivery application. Features include secure user authentication (Passport.js), cart management, and seamless database integration with MongoDB.",
+      desc: "A complete MERN stack food delivery application. Features include secure user authentication (Passport.js), Razorpay/Stripe payment integration, cart management, and seamless database integration with MongoDB.",
       github: "https://github.com/somesh-pandey12/FoodVerse-MERN-App",
-      demo: "#" // Jab live link ho, tab "#" hata kar link daal dena
+      demo: "#" 
     }
   ];
 
@@ -37,17 +37,26 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero / About Section */}
+      {/* Hero Section */}
       <section id="about" className="py-20 text-center px-4 max-w-3xl mx-auto">
         <p className="text-blue-500 font-semibold uppercase tracking-widest text-sm mb-3">Welcome to my portfolio</p>
         <h2 className="text-5xl font-extrabold mb-6 leading-tight">
           Building Scalable Web Apps & Exploring <span className="text-blue-500">AI Solutions</span>
         </h2>
-        <p className="text-gray-400 text-lg leading-relaxed">
+        <p className="text-gray-400 text-lg leading-relaxed mb-8">
           I am a final year B.Tech CSE student specializing in Artificial Intelligence. 
           Passionate about Full Stack Web Development (MERN Stack) and building clean, 
           user-focused digital experiences.
         </p>
+        
+        {/* Resume Download Button */}
+        <a 
+          href="/Somesh_Resume.pdf" 
+          download="Somesh_Resume.pdf"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition shadow-lg inline-block transform hover:scale-105"
+        >
+          Download Resume 📄
+        </a>
       </section>
 
       {/* Skills Section */}
@@ -71,13 +80,9 @@ function App() {
               <h3 className="text-2xl font-bold mb-3 text-white">{p.title}</h3>
               <p className="text-gray-400 mb-6 leading-relaxed">{p.desc}</p>
               <div className="flex space-x-4">
-                <a href={p.github} target="_blank" rel="noreferrer" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">
-                  GitHub Repo
-                </a>
+                <a href={p.github} target="_blank" rel="noreferrer" className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition">GitHub Repo</a>
                 {p.demo !== "#" && (
-                  <a href={p.demo} target="_blank" rel="noreferrer" className="border border-gray-700 hover:border-gray-500 text-gray-300 px-5 py-2.5 rounded-xl text-sm font-semibold transition">
-                    Live Demo
-                  </a>
+                  <a href={p.demo} target="_blank" rel="noreferrer" className="border border-gray-700 hover:border-gray-500 text-gray-300 px-5 py-2.5 rounded-xl text-sm font-semibold transition">Live Demo</a>
                 )}
               </div>
             </div>
@@ -85,69 +90,38 @@ function App() {
         </div>
       </section>
 
-      {/* Achievements & Coding Profiles Section */}
+      {/* Achievements Section */}
       <section id="achievements" className="max-w-4xl mx-auto py-16 px-4 border-t border-gray-900">
         <h2 className="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">Problem Solving & Coding Metrics</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {achievements.map((ach, index) => (
-            <div key={index} className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800 flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-bold text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full uppercase tracking-wider">{ach.metric}</span>
-                <h3 className="text-xl font-bold mt-3 mb-2 text-white">{ach.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{ach.detail}</p>
-              </div>
+            <div key={index} className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
+              <span className="text-xs font-bold text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full uppercase tracking-wider">{ach.metric}</span>
+              <h3 className="text-xl font-bold mt-3 mb-2 text-white">{ach.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{ach.detail}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Contact Section */}
-        <section id="contact" className="max-w-4xl mx-auto py-20 px-4 text-center border-t border-gray-900">
-  <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
-  <p className="text-gray-400 max-w-lg mx-auto mb-8">
-    I am actively looking for internship opportunities and software engineering roles. 
-    Feel free to reach out for collaboration or just to say hi!
-  </p>
-  {}
-  <a 
-    href="mailto:someshpandeycil@gmail.com" 
-    className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition shadow-lg inline-block transform hover:scale-105"
-  >
-    Say Hello 👋
-
-    {}
-<a 
-  href="https://wa.me/917309805693" 
-  target="_blank" 
-  rel="noreferrer"
-  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-bold transition shadow-lg inline-block"
->
-  WhatsApp Me 💬
-</a>
-  </a>
-</section>
+      <section id="contact" className="max-w-4xl mx-auto py-20 px-4 text-center border-t border-gray-900">
+        <h2 className="text-3xl font-bold mb-4">Let's Connect</h2>
+        <p className="text-gray-400 max-w-lg mx-auto mb-8">
+          I am actively looking for internship opportunities and software engineering roles.
+        </p>
+        <div className="flex justify-center gap-4">
+          <a href="mailto:someshpandeycil@gmail.com" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition shadow-lg inline-block">Say Hello 👋</a>
+          <a href="https://wa.me/917309805693" target="_blank" rel="noreferrer" className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold transition shadow-lg inline-block">WhatsApp Me 💬</a>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="py-10 text-center border-t border-gray-900 max-w-5xl mx-auto">
-  <p className="text-gray-500 mb-6">© 2026 Somesh. All rights reserved.</p>
-  <div className="flex justify-center space-x-10">
-    <a 
-      href="https://linkedin.com/in/your-profile" 
-      target="_blank" 
-      rel="noreferrer" 
-      className="text-gray-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-150"
-    >
-      <span className="text-3xl font-bold">LinkedIn</span>
-    </a>
-    <a 
-      href="https://github.com/somesh-pandey12" 
-      target="_blank" 
-      rel="noreferrer" 
-      className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-150"
-    >
-      <span className="text-3xl font-bold">GitHub</span>
-    </a>
-  </div>
-</footer>
+        <p className="text-gray-500">© 2026 Somesh. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
 
 export default App;
