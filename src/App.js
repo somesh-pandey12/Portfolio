@@ -7,9 +7,14 @@ function App() {
       desc: "A complete MERN stack food delivery application. Features include secure user authentication (Passport.js), Razorpay/Stripe payment integration, cart management, and seamless database integration with MongoDB.",
       github: "https://github.com/somesh-pandey12/FoodVerse-MERN-App",
       demo: "#" 
+    },
+    {
+      title: "VerifyAI",
+      desc: "AI-Powered Fake News Detector : AI-powered fake news detector using LLM (Llama 3.3 70B), React, Node.js, Python Flask & MongoDB",
+      github: "https://github.com/somesh-pandey12/VeriftAI", 
+      demo: "#" 
     }
   ];
-
   const achievements = [
     {
       title: "LeetCode Milestone",
